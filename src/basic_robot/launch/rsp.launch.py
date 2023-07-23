@@ -39,3 +39,6 @@ def generate_launch_description():
             description='Use ros2_control if true'),
         node_robot_state_publisher
     ])
+
+'''
+'''
