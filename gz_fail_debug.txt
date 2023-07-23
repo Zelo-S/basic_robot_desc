@@ -1,0 +1,54 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2023-07-23-13-43-08-015367-855f12e1d882-266614
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [266629]
+[INFO] [gzclient-2]: process started with pid [266631]
+[INFO] [robot_state_publisher-3]: process started with pid [266633]
+[INFO] [spawn_entity.py-4]: process started with pid [266635]
+[INFO] [spawner-5]: process started with pid [266637]
+[INFO] [spawner-6]: process started with pid [266639]
+[robot_state_publisher-3] [INFO] [1690119788.410416918] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-3] [INFO] [1690119788.410497653] [robot_state_publisher]: got segment chassis
+[robot_state_publisher-3] [INFO] [1690119788.410502852] [robot_state_publisher]: got segment left_wheel_1
+[robot_state_publisher-3] [INFO] [1690119788.410506099] [robot_state_publisher]: got segment right_wheel_1
+[spawn_entity.py-4] [INFO] [1690119788.544776606] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-4] [INFO] [1690119788.545081629] [spawn_entity]: Loading entity published on topic robot_description
+[spawn_entity.py-4] /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/qos.py:307: UserWarning: DurabilityPolicy.RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL is deprecated. Use DurabilityPolicy.TRANSIENT_LOCAL instead.
+[spawn_entity.py-4]   warnings.warn(
+[spawn_entity.py-4] [INFO] [1690119788.546755899] [spawn_entity]: Waiting for entity xml on robot_description
+[spawn_entity.py-4] [INFO] [1690119788.557909810] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-4] [INFO] [1690119788.558147775] [spawn_entity]: Waiting for service /spawn_entity
+[gzserver-1] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+[gzserver-1] ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+[gzserver-1] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+[gzserver-1] ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+[gzserver-1] ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+[gzserver-1] ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+[gzserver-1] ALSA lib conf.c:5701:(snd_config_expand) Evaluate error: No such file or directory
+[gzserver-1] ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+[gzserver-1] AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[spawn_entity.py-4] [INFO] [1690119789.063787061] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-4] [INFO] [1690119789.245165133] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [my_bot]
+[gzserver-1] [INFO] [1690119789.257424377] [gazebo_ros2_control]: Loading gazebo_ros2_control plugin
+[gzserver-1] [INFO] [1690119789.263497195] [gazebo_ros2_control]: Starting gazebo_ros2_control plugin in namespace: /
+[gzserver-1] [INFO] [1690119789.263774485] [gazebo_ros2_control]: Starting gazebo_ros2_control plugin in ros 2 node: gazebo_ros2_control
+[gzserver-1] [INFO] [1690119789.263843066] [gazebo_ros2_control]: Loading parameter files /home/work/basic_robot_desc/install/basic_robot/share/basic_robot/config/my_controllers.yaml
+[gzserver-1] [INFO] [1690119789.266356911] [gazebo_ros2_control]: connected to service!! robot_state_publisher
+[gzserver-1] [INFO] [1690119789.266712561] [gazebo_ros2_control]: Recieved urdf from param server, parsing...
+[ERROR] [gzserver-1]: process has died [pid 266629, exit code -11, cmd 'gzserver -slibgazebo_ros_init.so -slibgazebo_ros_factory.so -slibgazebo_ros_force_system.so'].
+[INFO] [spawn_entity.py-4]: process has finished cleanly [pid 266635]
+[spawner-5] [INFO] [1690119790.561713375] [spawner_joint_state_broadcaster]: Waiting for '/controller_manager' node to exist
+[spawner-6] [INFO] [1690119790.565711878] [spawner_diff_cont]: Waiting for '/controller_manager' node to exist
+[spawner-5] [INFO] [1690119792.581827749] [spawner_joint_state_broadcaster]: Waiting for '/controller_manager' node to exist
+[spawner-6] [INFO] [1690119792.583210543] [spawner_diff_cont]: Waiting for '/controller_manager' node to exist
+[spawner-5] [INFO] [1690119794.598261207] [spawner_joint_state_broadcaster]: Waiting for '/controller_manager' node to exist
+[spawner-6] [INFO] [1690119794.599808635] [spawner_diff_cont]: Waiting for '/controller_manager' node to exist
+[spawner-5] [INFO] [1690119796.616592783] [spawner_joint_state_broadcaster]: Waiting for '/controller_manager' node to exist
+[spawner-6] [INFO] [1690119796.617238427] [spawner_diff_cont]: Waiting for '/controller_manager' node to exist
+[spawner-5] [ERROR] [1690119798.636244051] [spawner_joint_state_broadcaster]: Controller manager not available
+[spawner-6] [ERROR] [1690119798.636285781] [spawner_diff_cont]: Controller manager not available
+[ERROR] [spawner-5]: process has died [pid 266637, exit code 1, cmd '/opt/ros/humble/lib/controller_manager/spawner joint_state_broadcaster --controller-manager /controller_manager --ros-args'].
+[ERROR] [spawner-6]: process has died [pid 266639, exit code 1, cmd '/opt/ros/humble/lib/controller_manager/spawner diff_cont --controller-manager /controller_manager --ros-args'].
+[ERROR] [gzclient-2]: process has died [pid 266631, exit code 255, cmd 'gzclient'].
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[robot_state_publisher-3] [INFO] [1690119830.354503137] [rclcpp]: signal_handler(signum=2)
+[INFO] [robot_state_publisher-3]: process has finished cleanly [pid 266633]
