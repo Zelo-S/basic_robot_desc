@@ -2,33 +2,33 @@
 <robot name="my_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <link name="base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
   </link>
   
   <joint name="base_joint" type="fixed">
     <parent link="base_link"/>
     <child link="chassis"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <link name="chassis">
-    
-    <inertial>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <mass value="10"/>
-      <inertia  ixx="0.41666666666666663" ixy="0" ixz="0" iyy="1.0416666666666665" iyz="0" izz="1.0416666666666665" />
-    </inertial>
-    
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://basic_robot/meshes/chassis.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="file://$(find basic_robot)/meshes/chassis.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://basic_robot/meshes/chassis.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="file://$(find basic_robot)/meshes/chassis.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="10"/>
+      <inertia  ixx="0.42" ixy="0" ixz="0" iyy="1.042" iyz="0" izz="1.042" />
+    </inertial>
   </link>
 
   <link name="left_wheel_1">
@@ -42,13 +42,13 @@
     <visual>
       <origin xyz="0.5 -0.0 -0.25" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://basic_robot/meshes/left_wheel_1.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="file://$(find basic_robot)/meshes/left_wheel_1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.5 -0.0 -0.25" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://basic_robot/meshes/left_wheel_1.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="file://$(find basic_robot)/meshes/left_wheel_1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -64,13 +64,13 @@
     <visual>
       <origin xyz="-0.5 -0.0 -0.25" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://basic_robot/meshes/right_wheel_1.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="file://$(find basic_robot)/meshes/right_wheel_1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="-0.5 -0.0 -0.25" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://basic_robot/meshes/right_wheel_1.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="file://$(find basic_robot)/meshes/right_wheel_1.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -88,5 +88,4 @@
     <child link="right_wheel_1"/>
     <axis xyz="1.0 0.0 0.0"/>
   </joint>
-
 </robot>
