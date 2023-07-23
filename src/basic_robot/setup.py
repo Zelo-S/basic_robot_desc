@@ -14,6 +14,7 @@ setup(
         (os.path.join('share', package_name, 'description'), glob(os.path.join('description', '*.xacro'))),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.py'))),
         (os.path.join('share', package_name, 'meshes'), glob(os.path.join('meshes', '*.stl'))),
+        (os.path.join('share', package_name, 'config'), glob(os.path.join('config', '*.yaml'))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
